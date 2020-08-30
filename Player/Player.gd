@@ -1,8 +1,12 @@
 extends KinematicBody2D
 
+export var can_spawn: bool = true
+export var next_doll: PackedScene
+
 onready var anim = $AnimatedSprite
 export var speed = 256
 var velocity = Vector2.ZERO
+
 export var dir = 'right'
 var v = {
 	"right": Vector2(1, 0),
@@ -10,6 +14,9 @@ var v = {
 	"up": Vector2(0, -1),
 	"down": Vector2(0, 1)
 }
+
+func init(_dir):
+	dir = _dir
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_right'):
@@ -37,3 +44,31 @@ func _physics_process(delta: float) -> void:
 		
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	position = position.round()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("spawn"):
+		spawn()
+		
+		
+func spawn():
+	if not can_spawn:
+		return
+	
+	can_spawn = false
+	
+	var new_doll = next_doll.instance()
+	new_doll.set_as_toplevel(true)
+	new_doll.position = position
+	
+	if dir == 'right':
+		new_doll.position.x += 32
+	elif dir == 'left':
+		new_doll.position.x -= 32
+	elif dir == 'up':
+		new_doll.position.y -= 32
+	elif dir == 'down':
+		new_doll.position.y += 32
+		
+	new_doll.init(dir)
+	
+	get_parent().add_child(new_doll)
