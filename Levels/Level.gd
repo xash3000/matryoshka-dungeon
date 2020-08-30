@@ -8,7 +8,16 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(_delta: float) -> void:
 	if check_win():
-		pass
+		for player in $Players.get_children():
+			player.speed = 0
+		var t = Timer.new()
+		t.set_wait_time(2)
+		t.set_one_shot(true)
+		self.add_child(t)
+		t.start()
+		yield(t, "timeout")
+		t.queue_free()
+		get_tree().change_scene_to(next_level)
 
 func check_win():
 	for torch in $Torches.get_children():

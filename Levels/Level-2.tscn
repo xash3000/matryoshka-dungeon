@@ -7,7 +7,7 @@
 [ext_resource path="res://Levels/Level.gd" type="Script" id=5]
 [ext_resource path="res://Assets/UI/paper-min.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Fonts/title-font.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Levels/Level-2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Levels/Level-3.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -49,31 +49,37 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 1/shapes = [  ]
 1/z_index = 0
 
-[node name="Level-1" type="Node2D"]
+[node name="Level-2" type="Node2D"]
 script = ExtResource( 5 )
 next_level = ExtResource( 8 )
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 108.69, 0 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 65541, 1073741824, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 0, 0, 131077, 1073741824, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131084, 1, 0, 131085, 0, 0, 196613, 1073741824, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 196617, 1, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 0, 0, 262149, 1073741824, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 0, 0, 327685, 1073741824, 0, 327686, 0, 0, 327687, 0, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 0, 0, 393221, 1073741824, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 0, 0, 458757, 1073741824, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0 )
+tile_data = PoolIntArray( 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 65539, 0, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 0, 0, 131075, 0, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131082, 1, 0, 131083, 1, 0, 131084, 1, 0, 131085, 0, 0, 196611, 0, 0, 196612, 1, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 1073741824, 0, 196617, 1073741824, 0, 196618, 1073741824, 0, 196619, 0, 0, 196620, 1, 0, 196621, 0, 0, 262147, 0, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 0, 0, 327683, 0, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1073741825, 0, 327687, 1073741825, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 0, 0, 393219, 0, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1073741824, 0, 393223, 1073741824, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393229, 0, 0, 458755, 0, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 224.253, 141.493 )
 current = true
 zoom = Vector2( 0.6, 0.6 )
 
-[node name="Torches" type="Node2D" parent="."]
-
-[node name="Torch" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 368, 208 )
-
 [node name="Players" type="Node2D" parent="."]
 
 [node name="Player-Big" parent="Players" instance=ExtResource( 4 )]
-position = Vector2( 242.53, 78.592 )
-can_spawn = false
+position = Vector2( 253.065, 237.473 )
+
+[node name="Player-Big2" parent="Players" instance=ExtResource( 4 )]
+position = Vector2( 508.595, 49.592 )
+
+[node name="Torches" type="Node2D" parent="."]
+
+[node name="Torch" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( 451.126, 78.4364 )
+
+[node name="Torch2" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( 290.104, 81.5073 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -95,11 +101,11 @@ margin_right = 387.127
 margin_bottom = 186.163
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "- use arrow keys 
-or W/A/S/D to
-move
+text = "- Light all the 
+torches.
 
-- Light the torch"
+- Stuck? press R
+to reset the level"
 __meta__ = {
 "_edit_use_anchors_": false
 }
