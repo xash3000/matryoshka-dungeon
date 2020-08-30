@@ -11,7 +11,7 @@ func _physics_process(_delta: float) -> void:
 		for player in $Players.get_children():
 			player.speed = 0
 		var t = Timer.new()
-		t.set_wait_time(2)
+		t.set_wait_time(3)
 		t.set_one_shot(true)
 		self.add_child(t)
 		t.start()

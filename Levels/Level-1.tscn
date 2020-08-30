@@ -103,3 +103,6 @@ move
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.352941, 0.341176, 0.341176, 1 )
