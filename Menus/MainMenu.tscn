@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Fonts/title-font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/UI/button-temp.png" type="Texture" id=2]
@@ -12,6 +12,10 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
 font_data = ExtResource( 3 )
 
 [node name="MainMenu" type="Node2D"]
@@ -122,5 +126,18 @@ speed = 0
 position = Vector2( 367.215, 11.2476 )
 scale = Vector2( 0.75, 0.75 )
 speed = 0
+
+[node name="tag" type="Label" parent="."]
+margin_left = 920.447
+margin_top = 318.708
+margin_right = 1202.45
+margin_bottom = 339.708
+rect_rotation = -19.3659
+custom_fonts/font = SubResource( 2 )
+text = "An extremely difficult puzzle game"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_Quit_pressed"]
