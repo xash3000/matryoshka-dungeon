@@ -122,7 +122,5 @@ speed = 0
 position = Vector2( 367.215, 11.2476 )
 scale = Vector2( 0.75, 0.75 )
 speed = 0
-
-[node name="MainMusic" type="AudioStreamPlayer2D" parent="."]
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_Quit_pressed"]

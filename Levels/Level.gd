@@ -10,6 +10,7 @@ func _physics_process(_delta: float) -> void:
 	if check_win():
 		for player in $Players.get_children():
 			player.speed = 0
+		$SFX/win.play()
 		var t = Timer.new()
 		t.set_wait_time(3)
 		t.set_one_shot(true)

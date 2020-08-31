@@ -19,6 +19,10 @@ config/name="russian-dolls"
 run/main_scene="res://Menus/MainMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+MainMusic="*res://MainMusic.tscn"
+
 [display]
 
 window/size/width=1280

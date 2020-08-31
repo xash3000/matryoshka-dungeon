@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Player/Player-Big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Level.gd" type="Script" id=5]
 [ext_resource path="res://Assets/UI/paper-min.png" type="Texture" id=6]
+[ext_resource path="res://Assets/SFX/win.ogg" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 37
@@ -77,3 +78,9 @@ __meta__ = {
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color( 0.352941, 0.341176, 0.341176, 1 )
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="win" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource( 7 )
+volume_db = 3.0

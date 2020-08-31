@@ -21,6 +21,7 @@ func init(_dir):
 
 func _ready() -> void:
 	$AnimatedSprite.play(dir)
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_right'):
 		velocity.x = speed
@@ -57,6 +58,7 @@ func spawn():
 	if not can_spawn:
 		return
 	
+	$Pop.play()
 	can_spawn = false
 	
 	var new_doll = next_doll.instance()

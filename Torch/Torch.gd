@@ -11,6 +11,8 @@ func _ready() -> void:
 		$Light2D.energy = 1
 
 func _on_Torch_body_entered(body: Node) -> void:
+	if not active:
+		$SFX/TorchOpen.play()
 	active = true
 	$Sprite/Particles2D.emitting = true
 	$Light2D.energy = 1
