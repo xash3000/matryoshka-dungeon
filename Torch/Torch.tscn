@@ -52,7 +52,7 @@ process_material = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="."]
-enabled = false
 texture = ExtResource( 3 )
+energy = 0.7
 [connection signal="body_entered" from="." to="." method="_on_Torch_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Torch_body_exited"]

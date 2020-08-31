@@ -7,7 +7,7 @@ onready var anim = $AnimatedSprite
 export var speed = 256
 var velocity = Vector2.ZERO
 
-export var dir = 'right'
+export var dir = 'down'
 var v = {
 	"right": Vector2(1, 0),
 	"left": Vector2(-1, 0),
@@ -17,7 +17,10 @@ var v = {
 
 func init(_dir):
 	dir = _dir
+	$AnimatedSprite.play(dir)
 
+func _ready() -> void:
+	$AnimatedSprite.play(dir)
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_right'):
 		velocity.x = speed

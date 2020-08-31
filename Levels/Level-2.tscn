@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Tiles/floor.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tiles/wall.png" type="Texture" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Player/Player-Big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Level.gd" type="Script" id=5]
 [ext_resource path="res://Assets/UI/paper-min.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Fonts/title-font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Levels/Level-3.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -49,6 +49,10 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="DynamicFont" id=3]
+size = 37
+font_data = ExtResource( 7 )
+
 [node name="Level-2" type="Node2D"]
 script = ExtResource( 5 )
 next_level = ExtResource( 8 )
@@ -69,9 +73,11 @@ zoom = Vector2( 0.6, 0.6 )
 
 [node name="Player-Big" parent="Players" instance=ExtResource( 4 )]
 position = Vector2( 253.065, 237.473 )
+can_spawn = false
 
 [node name="Player-Big2" parent="Players" instance=ExtResource( 4 )]
 position = Vector2( 508.595, 49.592 )
+can_spawn = false
 
 [node name="Torches" type="Node2D" parent="."]
 
@@ -99,7 +105,7 @@ margin_left = 112.127
 margin_top = 144.163
 margin_right = 387.127
 margin_bottom = 186.163
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "- Light all the 
 torches.

@@ -8,12 +8,12 @@ func _ready() -> void:
 	if always_active:
 		active = true
 		$Sprite/Particles2D.emitting = true
-		$Light2D.enabled = true
+		$Light2D.energy = 1
 
 func _on_Torch_body_entered(body: Node) -> void:
 	active = true
 	$Sprite/Particles2D.emitting = true
-	$Light2D.enabled = true
+	$Light2D.energy = 1
 	bodies += 1
 	
 
@@ -22,4 +22,4 @@ func _on_Torch_body_exited(body: Node) -> void:
 	if bodies == 0 and not always_active:
 		active = false
 		$Sprite/Particles2D.emitting = false
-		$Light2D.enabled = false
+		$Light2D.energy = 0.7
