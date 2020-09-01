@@ -53,8 +53,10 @@ process_material = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 1.52588e-05, -1.90735e-06 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 3 )
-energy = 0.7
+energy = 0.0
 
 [node name="SFX" type="Node2D" parent="."]
 

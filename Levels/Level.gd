@@ -1,6 +1,10 @@
 extends Node2D
 
 export var next_level: PackedScene
+export var canvas_mod: Color = "#000000"
+
+func _ready() -> void:
+	$CanvasModulate.color = canvas_mod
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed('reset'):

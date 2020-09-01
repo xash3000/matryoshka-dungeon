@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Player/Med/right.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Med/down..png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Player/Player.gd" type="Script" id=5]
 [ext_resource path="res://Player/Player-Small.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/SFX/pop.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Texture/2DLight.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -48,4 +49,10 @@ shape = SubResource( 2 )
 
 [node name="Pop" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
-volume_db = 3.0
+volume_db = 13.23
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -7.62939e-06, 0 )
+scale = Vector2( 0.166667, 0.208333 )
+texture = ExtResource( 8 )
+energy = 0.7

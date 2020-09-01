@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var can_spawn: bool = true
 export var next_doll: PackedScene
-
+export var max_energy = 0.7
 onready var anim = $AnimatedSprite
 export var speed = 256
 var velocity = Vector2.ZERO
@@ -21,6 +21,7 @@ func init(_dir):
 
 func _ready() -> void:
 	$AnimatedSprite.play(dir)
+	$Light2D.energy = max_energy
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed('ui_right'):

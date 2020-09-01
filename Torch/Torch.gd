@@ -25,4 +25,4 @@ func _on_Torch_body_exited(body: Node) -> void:
 	if bodies == 0 and not always_active:
 		active = false
 		$Sprite/Particles2D.emitting = false
-		$Light2D.energy = 0.5
+		$Light2D.energy = 0

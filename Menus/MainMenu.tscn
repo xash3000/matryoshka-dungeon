@@ -94,12 +94,14 @@ position = Vector2( 127.279, 186.676 )
 scale = Vector2( 3, 3 )
 active = true
 always_active = true
+max_energy = 0.4
 
 [node name="Torch2" parent="Torches" instance=ExtResource( 4 )]
 position = Vector2( 1137.03, 186.676 )
 scale = Vector2( 3, 3 )
 active = true
 always_active = true
+max_energy = 0.5
 
 [node name="Dolls" type="Node2D" parent="."]
 position = Vector2( 387.495, 93.3381 )
@@ -108,23 +110,27 @@ position = Vector2( 387.495, 93.3381 )
 position = Vector2( 66.5956, -4.75682 )
 scale = Vector2( 3, 3 )
 can_spawn = false
+max_energy = 0.0
 speed = 0
 
 [node name="Player-Med" parent="Dolls" instance=ExtResource( 5 )]
 position = Vector2( 185.774, -0.656845 )
 scale = Vector2( 2.25, 2.25 )
 can_spawn = false
+max_energy = 0.0
 speed = 0
 
 [node name="Player-Small" parent="Dolls" instance=ExtResource( 6 )]
 position = Vector2( 297.773, 4.79208 )
 scale = Vector2( 1.5, 1.5 )
 can_spawn = false
+max_energy = 0.0
 speed = 0
 
 [node name="Player-Tiny" parent="Dolls" instance=ExtResource( 8 )]
 position = Vector2( 367.215, 11.2476 )
 scale = Vector2( 0.75, 0.75 )
+max_energy = 0.0
 speed = 0
 
 [node name="tag" type="Label" parent="."]
