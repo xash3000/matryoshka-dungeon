@@ -19,7 +19,7 @@ script = ExtResource( 5 )
 next_level = ExtResource( 9 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 108.69, 0 )
+position = Vector2( 51.6081, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -38,24 +38,24 @@ position = Vector2( 186.01, 282.046 )
 [node name="Torches" type="Node2D" parent="."]
 
 [node name="Torch" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 544, 0 )
+position = Vector2( 481.586, 0 )
 
 [node name="Torch2" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 512, 288 )
+position = Vector2( 449.586, 288 )
 
 [node name="Torch3" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 158.414, 46.9101 )
+position = Vector2( 96, 46.9101 )
 
 [node name="Torch5" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 187.615, 183.584 )
+position = Vector2( 125.201, 183.584 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-margin_left = 32.0
-margin_top = 96.0
-margin_right = 1056.0
-margin_bottom = 864.0
+margin_left = -22.7035
+margin_top = 46.0533
+margin_right = 1001.3
+margin_bottom = 814.053
 rect_scale = Vector2( 0.36, 0.52 )
 texture = ExtResource( 6 )
 __meta__ = {
@@ -63,10 +63,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 64.0
-margin_top = 160.0
-margin_right = 349.0
-margin_bottom = 427.0
+margin_left = 14.0533
+margin_top = 112.432
+margin_right = 299.053
+margin_bottom = 379.432
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "- You can push
@@ -91,4 +91,4 @@ volume_db = 3.0
 [node name="Chests" type="Node2D" parent="."]
 
 [node name="Chest" parent="Chests" instance=ExtResource( 8 )]
-position = Vector2( 351.056, 137.439 )
+position = Vector2( 299.053, 141.493 )

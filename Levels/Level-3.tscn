@@ -18,7 +18,7 @@ script = ExtResource( 5 )
 next_level = ExtResource( 8 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 108.69, 0 )
+position = Vector2( -23.31, 0 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
@@ -32,29 +32,29 @@ zoom = Vector2( 0.6, 0.6 )
 [node name="Players" type="Node2D" parent="."]
 
 [node name="Player-Big" parent="Players" instance=ExtResource( 4 )]
-position = Vector2( 305.065, 253.473 )
+position = Vector2( 167.065, 253.473 )
 dir = "right"
 
 [node name="Torches" type="Node2D" parent="."]
 
 [node name="Torch" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 509.126, 56.4364 )
+position = Vector2( 371.126, 54.4364 )
 
 [node name="Torch2" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 516.104, 257.507 )
+position = Vector2( 380.104, 257.507 )
 
 [node name="Torch3" parent="Torches" instance=ExtResource( 3 )]
-position = Vector2( 240.104, 257.507 )
+position = Vector2( 102.104, 257.507 )
 active = true
 always_active = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-margin_left = 68.9243
-margin_top = 94.1958
-margin_right = 1092.92
-margin_bottom = 862.196
+margin_left = 28.9243
+margin_top = 36.1958
+margin_right = 1052.92
+margin_bottom = 804.196
 rect_scale = Vector2( 0.36, 0.52 )
 texture = ExtResource( 6 )
 __meta__ = {
@@ -62,10 +62,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 112.127
-margin_top = 144.163
-margin_right = 387.127
-margin_bottom = 186.163
+margin_left = 64.127
+margin_top = 74.163
+margin_right = 341.127
+margin_bottom = 386.163
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "- press SHIFT to
