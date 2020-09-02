@@ -1,5 +1,5 @@
 Game Name: Matryoshka Dungeon
-Created by Ali Abdelrahman for Khartoum Game Jam 2020
+A puzzle game created by Ali Abdelrahman for Khartoum Game Jam 2020
 
 The folder "source" contains original source code and assets for the game
 
@@ -7,6 +7,8 @@ the folder "executables" contains binary runnable programs for windows, linux an
 
 
 The goal of the game is simple, light all the torches in the room using matryoshka dolls.
+
+the catch is you start with a completely dark dungeon room and you use torches to build a memory of how the room looks like. Also all the dolls move with the same key so you have to use the structure of the room to your advantage.
 
 Assets downloaded from the internet:
         - Floor and wall sprites licensed as public domain 
