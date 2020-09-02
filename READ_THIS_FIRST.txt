@@ -1,1 +1,17 @@
 Game Name: Matryoshka Dungeon
+Created by Ali Abdelrahman for Khartoum Game Jam 2020
+
+The folder "source" contains original source code and assets for the game
+
+the folder "executables" contains binary runnable programs for windows, linux and web browsers
+
+
+The goal of the game is simple, light all the torches in the room using matryoshka dolls.
+
+Assets downloaded from the internet:
+        - Floor and wall sprites licensed as public domain 
+        link: http://opengameart.org/content/dungeon-crawl-32x32-tiles
+
+
+        - Music licensed as CC-BY-4.0
+        link: http://opengameart.org/content/spooky-forest-music

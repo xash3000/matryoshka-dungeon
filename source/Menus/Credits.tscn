@@ -13,15 +13,15 @@ font_data = ExtResource( 3 )
 size = 37
 font_data = ExtResource( 3 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 37
+font_data = ExtResource( 3 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 37
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 37
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=6]
 size = 30
 font_data = ExtResource( 3 )
 
@@ -104,7 +104,7 @@ margin_left = 506.0
 margin_top = 76.2426
 margin_right = 663.0
 margin_bottom = 120.243
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "@__aliasf"
 __meta__ = {
@@ -117,7 +117,7 @@ margin_top = 338.236
 margin_right = 1174.84
 margin_bottom = 380.236
 rect_scale = Vector2( 0.84, 1 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "opengameart.org/content/dungeon-crawl-32x32-tiles"
 
@@ -126,7 +126,7 @@ margin_left = 305.31
 margin_top = 464.699
 margin_right = 964.31
 margin_bottom = 498.699
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "opengameart.org/content/spooky-forest-music"
 [connection signal="pressed" from="CanvasLayer/return" to="." method="_on_return_pressed"]
