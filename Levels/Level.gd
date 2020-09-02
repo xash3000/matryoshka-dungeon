@@ -12,6 +12,7 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(_delta: float) -> void:
 	if check_win():
+		hide_darkness()
 		for player in $Players.get_children():
 			player.speed = 0
 		var t = Timer.new()
@@ -29,6 +30,13 @@ func check_win():
 			return false
 	return true
 
+
+func hide_darkness():
+	for torch in $Torches.get_children():
+		torch.get_node("Light2D").energy = 0
+	for player in $Players.get_children():
+		player.get_node("Light2D").energy = 0
+	$CanvasModulate.color = '#ffffff'
 
 func _on_RestartGame_pressed() -> void:
 	get_tree().change_scene("res://Menus/MainMenu.tscn")

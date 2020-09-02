@@ -16,6 +16,9 @@ font_data = ExtResource( 2 )
 [node name="Level-7" type="Node2D"]
 position = Vector2( -6, -2 )
 script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
 next_level = ExtResource( 7 )
 
 [node name="TileMap" type="TileMap" parent="."]
