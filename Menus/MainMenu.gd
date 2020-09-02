@@ -8,3 +8,7 @@ func _on_Play_pressed() -> void:
 
 func _on_Quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_Credits_pressed() -> void:
+	get_tree().change_scene("res://Menus/Credits.tscn")

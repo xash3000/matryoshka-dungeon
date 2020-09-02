@@ -1,6 +1,5 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Assets/Fonts/title-font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Assets/UI/button-temp.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Torch/Torch.tscn" type="PackedScene" id=4]
@@ -15,6 +14,10 @@ size = 75
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 57
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
 size = 18
 font_data = ExtResource( 3 )
 
@@ -45,7 +48,7 @@ margin_left = 87.6813
 margin_top = 28.2843
 margin_right = 227.681
 margin_bottom = 96.2843
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "PLAY"
 uppercase = true
@@ -62,7 +65,7 @@ margin_left = 39.598
 margin_top = 25.4558
 margin_right = 267.598
 margin_bottom = 93.4558
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Credits"
 uppercase = true
@@ -80,7 +83,7 @@ margin_left = 86.2051
 margin_top = 33.1558
 margin_right = 209.205
 margin_bottom = 101.156
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "QUIT"
 __meta__ = {
@@ -139,11 +142,12 @@ margin_top = 318.708
 margin_right = 1202.45
 margin_bottom = 339.708
 rect_rotation = -19.3659
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "An extremely difficult puzzle game"
 uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Buttons/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Buttons/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="Buttons/Quit" to="." method="_on_Quit_pressed"]

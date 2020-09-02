@@ -3,5 +3,5 @@
 [ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 59
+size = 30
 font_data = ExtResource( 1 )
