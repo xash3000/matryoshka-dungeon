@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player-Big.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Torch/Torch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Chest/Chest.tscn" type="PackedScene" id=4]
 
 [node name="DemoScene" type="Node2D"]
 
@@ -21,4 +22,11 @@ active = true
 always_active = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.219608, 0.211765, 0.211765, 1 )
+
+[node name="Chest" parent="." instance=ExtResource( 4 )]
+position = Vector2( 633.196, 493.033 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2( 0.6, 0.6 )

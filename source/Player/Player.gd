@@ -46,10 +46,17 @@ func _physics_process(delta: float) -> void:
 		dir = 'down'
 	else:
 		velocity = Vector2.ZERO
-		
+	push_chest()
 	velocity = move_and_slide(velocity, Vector2(0, -1))
 	position = position.round()
 
+func push_chest():
+	if get_slide_count() == 0:
+		return
+	var chest = get_slide_collision(0).collider as Chest
+	
+	if chest:
+		chest.push(velocity / 1.3)
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("spawn"):
 		spawn()
