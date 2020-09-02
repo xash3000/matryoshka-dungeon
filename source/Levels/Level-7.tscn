@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Torch/Torch.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player-Big.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Levels/Level.gd" type="Script" id=5]
+[ext_resource path="res://Assets/UI/paper-min.png" type="Texture" id=6]
+[ext_resource path="res://Levels/ending.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Chest/Chest.tscn" type="PackedScene" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+font_data = ExtResource( 2 )
+
+[node name="Level-7" type="Node2D"]
+position = Vector2( -6, -2 )
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": ""
+}
+next_level = ExtResource( 7 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 75.8463, 0 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -65543, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -131064, 0, 0, -131063, 0, 0, -131062, 0, 0, -131061, 0, 0, -131060, 0, 0, -131059, 0, 0, -131058, 0, 0, -131057, 0, 0, -7, 0, 0, -6, 1, 0, -5, 1, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 1, 0, -65536, 0, 0, -65535, 1, 0, -65534, 1, 0, -65533, 0, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 0, 0, -65524, 1, 0, -65523, 1, 0, -65522, 1, 0, -65521, 0, 0, 65529, 0, 0, 65530, 1, 0, 65531, 1, 0, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 0, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 0, 0, 131065, 0, 0, 131066, 0, 0, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 1, 0, 131071, 1, 0, 65536, 0, 0, 65537, 1, 0, 65538, 1, 0, 65539, 0, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 0, 0, 65545, 0, 0, 65546, 1, 0, 65547, 0, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 0, 0, 196601, 0, 0, 196602, 1, 0, 196603, 1, 0, 196604, 1, 0, 196605, 0, 0, 196606, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 0, 0, 131079, 1, 0, 131080, 1, 0, 131081, 0, 0, 131082, 1, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 262137, 0, 0, 262138, 1, 0, 262139, 1, 0, 262140, 1, 0, 262141, 0, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 0, 0, 196615, 1, 0, 196616, 1, 0, 196617, 0, 0, 196618, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 0, 0, 327673, 0, 0, 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 0, 0, 393209, 0, 0, 393210, 0, 0, 393211, 0, 0, 393212, 0, 0, 393213, 0, 0, 393214, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 0, 0, 327687, 1, 0, 327688, 1, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 0, 0, 393217, 0, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 0, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458753, 0, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 0, 0, 524289, 0, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 0, 0, 589825, 0, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 224.253, 141.493 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Player-Big" parent="Players" instance=ExtResource( 4 )]
+position = Vector2( 183.876, 277.07 )
+
+[node name="Torches" type="Node2D" parent="."]
+
+[node name="Torch" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( 134.091, 8.00067 )
+
+[node name="Torch2" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( -82.8832, -7.89128 )
+
+[node name="Torch3" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( -64.6416, 123.347 )
+
+[node name="Torch4" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( 323.148, 102.904 )
+
+[node name="Torch6" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( 319.148, 189.634 )
+
+[node name="Torch5" parent="Torches" instance=ExtResource( 3 )]
+position = Vector2( 505.008, 40.844 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+visible = false
+margin_left = 32.0
+margin_top = 96.0
+margin_right = 1056.0
+margin_bottom = 864.0
+rect_scale = Vector2( 0.36, 0.52 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+margin_left = 64.0
+margin_top = 160.0
+margin_right = 349.0
+margin_bottom = 427.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "- You can push
+the chest
+
+- remember that
+you can press R
+to reset the level"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.352941, 0.341176, 0.341176, 1 )
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="Chests" type="Node2D" parent="."]
+
+[node name="Chest" parent="Chests" instance=ExtResource( 8 )]
+position = Vector2( 28.6157, 47.2602 )
+
+[node name="Chest2" parent="Chests" instance=ExtResource( 8 )]
+position = Vector2( 453.499, 174.071 )
+
+[node name="Blocks" type="Node2D" parent="."]

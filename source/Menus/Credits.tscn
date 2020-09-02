@@ -1,0 +1,135 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/UI/paper-min.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/button-temp.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Menus/Credits.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 43
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 37
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 37
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 37
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 3 )
+
+[node name="Credits" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_left = 152.139
+margin_top = 33.6
+margin_right = 1176.14
+margin_bottom = 801.6
+rect_scale = Vector2( 0.932961, 0.68 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="return" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2( 456.515, 560.633 )
+normal = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CanvasLayer/return"]
+margin_left = 40.0452
+margin_top = 16.0181
+margin_right = 476.045
+margin_bottom = 119.018
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Return to 
+main menu"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+margin_left = 211.0
+margin_top = 76.0
+margin_right = 1062.0
+margin_bottom = 525.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "- Made by Ali AF(               on twitter)
+
+- Special thanks to SARAH, Mazin and Ibrahim for beta testing the game
+
+- Floor and walls sprites licensed as public domain
+
+
+- Music licensed as CC-BY-4.0"
+text = "- Made by Ali AF(               on twitter)
+
+- Special thanks to SARAH, Mazin and Ibrahim for beta testing the game
+
+- Floor and walls sprites licensed as public domain
+
+
+- Music licensed as CC-BY-4.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="twitter" type="LinkButton" parent="Control"]
+margin_left = 506.0
+margin_top = 76.2426
+margin_right = 663.0
+margin_bottom = 120.243
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "@__aliasf"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sprites" type="LinkButton" parent="Control"]
+margin_left = 246.839
+margin_top = 338.236
+margin_right = 1174.84
+margin_bottom = 380.236
+rect_scale = Vector2( 0.84, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "opengameart.org/content/dungeon-crawl-32x32-tiles"
+
+[node name="music" type="LinkButton" parent="Control"]
+margin_left = 305.31
+margin_top = 464.699
+margin_right = 964.31
+margin_bottom = 498.699
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "opengameart.org/content/spooky-forest-music"
+[connection signal="pressed" from="CanvasLayer/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Control/twitter" to="." method="_on_twitter_pressed"]
+[connection signal="pressed" from="Control/sprites" to="." method="_on_sprites_pressed"]
+[connection signal="pressed" from="Control/music" to="." method="_on_music_pressed"]
