@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var can_spawn: bool = true
 export var next_doll: PackedScene
-export var max_energy = 0.7
+export var max_energy = 1.0
 onready var anim = $AnimatedSprite
 export var speed = 256
 var velocity = Vector2.ZERO

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Player/Player-Big.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Levels/Level.gd" type="Script" id=5]
 [ext_resource path="res://Assets/UI/paper-min.png" type="Texture" id=6]
-[ext_resource path="res://Assets/SFX/win.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Chest/Chest.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Levels/Block.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Levels/Level-6.tscn" type="PackedScene" id=10]
@@ -40,23 +39,18 @@ position = Vector2( 95.876, 139.07 )
 
 [node name="Torch" parent="Torches" instance=ExtResource( 3 )]
 position = Vector2( 443.339, 264.116 )
-max_energy = 1.0
 
 [node name="Torch2" parent="Torches" instance=ExtResource( 3 )]
 position = Vector2( -49.2769, 93.6096 )
-max_energy = 1.0
 
 [node name="Torch3" parent="Torches" instance=ExtResource( 3 )]
 position = Vector2( 362.045, 250.189 )
-max_energy = 1.0
 
 [node name="Torch4" parent="Torches" instance=ExtResource( 3 )]
 position = Vector2( 222.045, 262.189 )
-max_energy = 1.0
 
 [node name="Torch5" parent="Torches" instance=ExtResource( 3 )]
 position = Vector2( 154.402, 234.575 )
-max_energy = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -94,10 +88,6 @@ __meta__ = {
 color = Color( 0.352941, 0.341176, 0.341176, 1 )
 
 [node name="SFX" type="Node2D" parent="."]
-
-[node name="win" type="AudioStreamPlayer2D" parent="SFX"]
-stream = ExtResource( 7 )
-volume_db = 3.0
 
 [node name="Chests" type="Node2D" parent="."]
 
