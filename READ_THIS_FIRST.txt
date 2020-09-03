@@ -10,6 +10,9 @@ The goal of the game is simple, light all the torches in the room using matryosh
 
 the catch is you start with a completely dark dungeon room and you use torches to build a memory of how the room looks like. Also all the dolls move with the same key so you have to use the structure of the room to your advantage.
 
+Here's a youtube video that shows a walkthrough the whole (warning: spoils solutions)
+link: https://youtu.be/arhv9Nnzn5U
+
 Assets downloaded from the internet:
         - Floor and wall sprites licensed as public domain 
         link: http://opengameart.org/content/dungeon-crawl-32x32-tiles
